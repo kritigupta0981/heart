@@ -17,18 +17,90 @@ st.set_page_config(
 # Custom CSS for better aesthetics
 st.markdown("""
     <style>
-    .main {
-        background-color: #f5f7f9;
+    /* Main background */
+    .stApp {
+        background: linear-gradient(135deg, #1e1e2f 0%, #121212 100%);
+        color: #ffffff;
     }
+    
+    /* Titles and Headers */
+    h1, h2, h3, .stSubheader {
+        color: #ff4b4b !important;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    /* Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #161625;
+        border-right: 1px solid #333;
+    }
+    
+    /* Input fields and select boxes */
+    .stTextInput>div>div>input, .stNumberInput>div>div>input, .stSelectbox>div>div>div {
+        background-color: #2b2b3b !important;
+        color: #ffffff !important;
+        border: 1px solid #444 !important;
+        border-radius: 8px !important;
+    }
+    
+    label {
+        color: #e0e0e0 !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Buttons */
     .stButton>button {
         width: 100%;
-        border-radius: 5px;
-        height: 3em;
-        background-color: #ff4b4b;
+        border-radius: 12px;
+        height: 3.5em;
+        background: linear-gradient(90deg, #ff4b4b 0%, #ff7676 100%);
         color: white;
+        font-weight: bold;
+        border: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 75, 75, 0.3);
     }
+    
+    .stButton>button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 75, 75, 0.4);
+    }
+    
+    /* Metrics and Cards */
+    .stMetric {
+        background-color: #2b2b3b;
+        padding: 15px;
+        border-radius: 12px;
+        border-left: 5px solid #ff4b4b;
+    }
+    
+    /* Success/Error Alerts */
     .stAlert {
-        border-radius: 10px;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    /* Tabs */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 20px;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        height: 50px;
+        white-space: pre-wrap;
+        background-color: transparent;
+        border-radius: 4px 4px 0px 0px;
+        gap: 1px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .stTabs [aria-selected="true"] {
+        background-color: #2b2b3b;
+        border-bottom: 2px solid #ff4b4b !important;
     }
     </style>
     """, unsafe_allow_html=True)
