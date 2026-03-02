@@ -31,7 +31,7 @@ st.markdown("""
         border-radius: 10px;
     }
     </style>
-    """, unsafe_allow_stdio=True)
+    """, unsafe_allow_html=True)
 
 # Title and Description
 st.title("❤️ Heart Disease Prediction App")
